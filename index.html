@@ -4,34 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional CSS styling */
         body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
         }
 
         header {
             background-color: #61dafb;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        p {
+            margin: 10px 0 0;
         }
 
         #content {
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            padding: 20px;
             margin-top: 20px;
         }
 
         footer {
             background-color: #61dafb;
             color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         /* Chess input styling */
         #lichessInput {
             display: flex;
             align-items: center;
-            margin: 20px;
+            margin: 20px 0;
         }
 
         #lichessInput label {
@@ -39,9 +58,18 @@
         }
 
         #lichessInput input {
-            padding: 5px;
+            padding: 8px;
             border: 1px solid #ccc;
             border-radius: 3px;
+        }
+
+        /* About section styling */
+        #about {
+            margin-top: 20px;
+        }
+
+        #about h2 {
+            color: #61dafb;
         }
     </style>
     <script>
@@ -69,8 +97,8 @@
     </header>
 
     <section id="content">
-        <h2>Chess Topics</h2>
-        <p>Explore various chess-related articles, tutorials, and resources to enhance your skills.</p>
+        <h2>Welcome to ChessHub!</h2>
+        <p>Explore a variety of chess-related content, from tutorials to strategy guides, all freely available for chess enthusiasts.</p>
 
         <h2>Lichess Username</h2>
         <div id="lichessInput">
@@ -80,6 +108,13 @@
 
         <!-- Display stored username -->
         <p id="storedUsername"></p>
+
+        <div id="about">
+            <h2>About ChessHub</h2>
+            <p>ChessHub is a community-driven platform dedicated to providing valuable chess content. Whether you're a beginner or an experienced player, discover resources to enhance your skills and enjoy the world of chess.</p>
+        </div>
+
+        <!-- Add more content as needed -->
     </section>
 
     <footer>
