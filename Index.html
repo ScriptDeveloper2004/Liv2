@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS styling */
+        body {
+            color: #333;
+        }
+
+        header {
+            background-color: #61dafb;
+        }
+
+        #content {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #61dafb;
+            color: #fff;
+        }
+
+        /* Chess input styling */
+        #lichessInput {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+        #lichessInput label {
+            margin-right: 10px;
+        }
+
+        #lichessInput input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+    <script>
+        // Retrieve stored username and display
+        document.addEventListener('DOMContentLoaded', function () {
+            const storedUsername = localStorage.getItem('lichessUsername');
+            if (storedUsername) {
+                document.getElementById('storedUsername').innerText = `Stored Lichess Username: ${storedUsername}`;
+            }
+        });
+
+        // Save username to local storage on input change
+        document.getElementById('username').addEventListener('input', function () {
+            const usernameInput = this.value.trim();
+            localStorage.setItem('lichessUsername', usernameInput);
+        });
+    </script>
+    <title>ChessHub</title>
+</head>
+
+<body>
+    <header>
+        <h1>ChessHub</h1>
+        <p>Your Open Source Chess Learning Center</p>
+    </header>
+
+    <section id="content">
+        <h2>Chess Topics</h2>
+        <p>Explore various chess-related articles, tutorials, and resources to enhance your skills.</p>
+
+        <h2>Lichess Username</h2>
+        <div id="lichessInput">
+            <label for="username">Enter your Lichess username:</label>
+            <input type="text" id="username" placeholder="Your Lichess username">
+        </div>
+
+        <!-- Display stored username -->
+        <p id="storedUsername"></p>
+    </section>
+
+    <footer>
+        <p>Contribute on <a href="https://github.com/yourusername/chesshub" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+
+</html>
